@@ -1,0 +1,22 @@
+Var angle;
+Var x;
+Var couleur;
+Debut
+x = 11.25/2;
+angle = 0-x;
+couleur = 9;
+Couleur couleur;
+Avance 300;
+Tourne 0-90;
+Avance 200;
+Tourne 90;
+Baspinceau;
+Pour 32*2 Tours
+Debut
+Avance 25;
+Tourne angle;
+couleur = couleur-1;
+Si couleur Alors couleur = 9;
+Couleur couleur;
+Fin
+Fin

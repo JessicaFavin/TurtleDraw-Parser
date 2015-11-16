@@ -1,0 +1,25 @@
+Var angle;
+Var x;
+Var e;
+Debut
+angle = 0-90;
+x = 5;
+e = 3;
+Baspinceau;
+Avance 100;
+Couleur 8;
+Tourne angle;
+Avance 100;
+Si angle 
+Alors Couleur 7;
+Sinon Couleur 6;
+Avance 100;
+Tant que x
+Faire Debut
+Couleur x;
+Epaisseur e;
+Avance 50;
+e = e+3;
+x = x-1;
+Fin
+Fin

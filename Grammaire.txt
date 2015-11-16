@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------------------------------------------
+------------------------------------------- Grammaire en mode interpreté ------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+Code -> Prog
+Prog -> Decl | Inst
+Decl -> Var identificateur;
+Inst -> identificateur = Exp; | Debut BlocInst Fin | Avance Exp; | Tourne Exp; | Hautpinceau; | Baspinceau;
+ | Couleur Exp; | Epaisseur Exp; | Si Exp Alors Inst InstSuite | Tant que Exp Faire Inst | Pour Exp Tours Inst 
+ | Mode Exp; | Sauvegarde;
+InstSuite -> Sinon Inst | e
+BlocInst -> Inst BlocInst | e
+Exp -> nombre ExpSuite | identificateur ExpSuite | (Exp) ExpSuite
+ExpSuite -> Op ExpSuite | e
+Op -> + Exp | - Exp | * Exp | / Exp
+
+-------------------------------------------------------------------------------------------------------------------
+---------------------------------------- Grammaire pour les fichiers chargés --------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+Code -> Prog$
+Prog -> Decl Inst
+Decl -> Var identificateur; Decl | e
+Inst -> identificateur = Exp; | Debut BlocInst Fin | Avance Exp; | Tourne Exp; | Hautpinceau; | Baspinceau;
+ | Couleur Exp; | Epaisseur Exp; | Si Exp Alors Inst InstSuite | Tant que Exp Faire Inst | Pour Exp Tours Inst
+ | Mode Exp; | Sauvegarde;
+InstSuite -> Sinon Inst | e
+BlocInst -> Inst BlocInst | e
+Exp -> nombre ExpSuite | identificateur ExpSuite | (Exp) ExpSuite
+ExpSuite -> Op ExpSuite | e
+Op -> + Exp | - Exp | * Exp | / Exp

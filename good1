@@ -1,0 +1,12 @@
+Var angle;
+Debut
+angle = 0-(45*1)+1;
+Baspinceau;
+Avance 100;
+Tourne angle;
+Avance 100;
+Tourne angle;
+Avance 100;
+Tourne angle;
+Avance 100;
+Fin
